@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🛍️ Student Shop</h1>
+        
+        <div class="products">
+            <div class="product" data-id="1">
+                <h3>📚 Programming Book</h3>
+                <p>Learn JavaScript - $25</p>
+                <button class="buy-btn" data-price="25">Buy Now</button>
+            </div>
+            
+            <div class="product" data-id="2">
+                <h3>🎧 Wireless Headphones</h3>
+                <p>Noise Cancelling - $50</p>
+                <button class="buy-btn" data-price="50">Buy Now</button>
+            </div>
+            
+            <div class="product" data-id="3">
+                <h3>☕ Coffee Mug</h3>
+                <p>Developer Edition - $15</p>
+                <button class="buy-btn" data-price="15">Buy Now</button>
+            </div>
+        </div>
+        
+        <div class="order-form" style="display: none;" id="orderForm">
+            <h2>Place Your Order</h2>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="text" id="product" readonly>
+            <input type="number" id="price" readonly>
+            <button id="submitOrder">Complete Purchase</button>
+        </div>
+        
+        <div class="order-status" id="status"></div>
+        
+        <div class="logs">
+            <h3>📋 Recent Orders</h3>
+            <div id="orderLogs">No orders yet...</div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
