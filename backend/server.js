@@ -59,6 +59,23 @@ async function sendOrderEmail(order) {
     }
 }
 
+// Add to server.js after email sending
+async function sendToGoogleSheets(order) {
+    const webhookUrl = 'https://hooks.zapier.com/hooks/catch/25689523/uf07dq3/';
+    
+    await fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            orderId: order.orderId,
+            customer: order.customerName,
+            product: order.product,
+            price: order.price,
+            date: new Date().toISOString()
+        })
+    });
+}
+
 // Routes
 app.get('/api/health', (req, res) => {
     res.json({ 
