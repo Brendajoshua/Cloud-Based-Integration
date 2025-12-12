@@ -1,0 +1,16 @@
+[
+  {
+    "customerName": "John Doe",
+    "customerEmail": "john@student.edu",
+    "product": "Programming Book",
+    "price": "25",
+    "orderId": "ORD123456"
+  },
+  {
+    "customerName": "Jane Smith",
+    "customerEmail": "jane@student.edu",
+    "product": "Wireless Headphones",
+    "price": "50",
+    "orderId": "ORD123457"
+  }
+]
